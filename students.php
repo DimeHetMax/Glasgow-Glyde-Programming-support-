@@ -1,27 +1,38 @@
 <?php 
- include 'partials/header.php'
+ include 'partials/header.php';
+ include 'partials/scripts/scores.php'
 ?>
 
-
-<section class="text-gray-600 body-font">
-    <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-        <div
-            class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Student
-            </h1>
-            <p class="mb-8 leading-relaxed">Copper mug try-hard pitchfork pour-over freegan heirloom neutra air plant
-                cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken authentic
-                tumeric truffaut hexagon try-hard chambray.</p>
-            <div class="flex justify-center">
-                <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">add picture</button>
-                <button class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">delete</button>
+<!-- Content -->
+<div class="flex flex-col">
+    <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+        <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+            <div class="overflow-hidden">
+                <table class="min-w-full">
+                    <thead class="border-b">
+                        <tr>
+                            <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">#</th>
+                            <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">Name</th>
+                            <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">Score</th>
+                            <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">Grade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($students as $student) : ?>
+                            <tr class="border-b">
+                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"><?= $index++ ?></td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"><?= $student["name"] ?></td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"><?= $student["score"] ?></td>
+                                <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">Grade</td>
+                            </tr>
+                        <?php endforeach ?>
+                    </tbody>
+                </table>
             </div>
         </div>
-        <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-            <img class="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600">
-        </div>
     </div>
-</section>
+</div>
+
 <?php 
  include 'partials/footer.php'
 ?>
