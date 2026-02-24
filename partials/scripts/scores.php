@@ -3,7 +3,7 @@
  $students = [
     [
         "name" => "Max Dime",
-        "score" => 99,
+        "score" => 98,
     ],
     [
         "name" => "James Het",
@@ -11,15 +11,23 @@
     ],
     [
         "name" => "Michael Paget",
-        "score" => 98,
+        "score" => 97,
     ],
      [
         "name" => "Kirk Hammet",
-        "score" => 100,
+        "score" => 99,
     ],
     [
         "name" => "Matt Tuck",
         "score" => 90,
+    ],
+    [
+        "name" => "Mark",
+        "score" => 19,
+    ],
+     [
+        "name" => "Gen",
+        "score" => 19,
     ]
  ];
 ?>

@@ -1,4 +1,5 @@
 <?php 
+ $title = 'Student Grades'; 
  include 'partials/header.php';
  include 'partials/scripts/scores.php';
 function grade_from_scores(int $score): string 
@@ -16,6 +17,7 @@ function grade_from_scores(int $score): string
 ?>
 
 <!-- Content -->
+ <h1><?=  $title ?></h1>
 <div class="flex flex-col">
     <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
         <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">

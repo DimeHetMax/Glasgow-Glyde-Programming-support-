@@ -1,8 +1,9 @@
 <?php
-    include 'partials/header.php';
+$title = 'Home Page';
+include 'partials/header.php';
 ?>
 <!-- Section Hero -->
- <section class=" w-full  bg-[#0A2025] py-9 px-8">
+<section class=" w-full  bg-[#0A2025] py-9 px-8">
   <div class="mx-auto flex  flex-col items-center lg:flex-row justify-center gap-10 py-40 max-w-[1440px] bg-no-repeat ">
     <div class="w-[660px]  flex-col justify-center items-start gap-20 inline-flex">
       <div class="self-stretch  flex-col justify-start items-start gap-5 flex">
@@ -34,7 +35,7 @@
 <section class=" w-full bg-white dark:bg-[#0A2025] py-9 px-8">
   <div class="mx-auto max-w-[1160px] ">
     <header class="h-12 mb-8 justify-between items-center flex">
-      <h2 class="text-[#0A2025] dark:text-white text-2xl font-bold font-['Roboto']" id ="work">Shop by Sport</h2>
+      <h2 class="text-[#0A2025] dark:text-white text-2xl font-bold font-['Roboto']" id="work">Shop by Sport</h2>
       <div class="flex gap-4"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"
           xmlns="http://www.w3.org/2000/svg">
           <path
@@ -73,5 +74,5 @@
 </section>
 <!-- End of cards -->
 <?php
-    include 'partials/footer.php';
+include 'partials/footer.php';
 ?>
