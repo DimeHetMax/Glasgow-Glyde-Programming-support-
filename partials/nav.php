@@ -1,21 +1,45 @@
-<navbar>
-      <div class='w-full py-3 border-b'>
-
-        <div class='flex justify-between px-20 items-center font-semibold'>
-          <div>
-            <a href="./index.php"> <h1 class="text-2xl">LOGO</h1></a>
-          </div>
-          <div class='flex xl:gap-10 md:gap-8  gap-2'>
-            <a href="./index.php">Home</a>
-            <a href="#work">Work</a>
-            <a href="./students.php">Student</a>
-            <a href="./students_grades.php">Student GRADES</a>
-            <a href="">Testimonial</a>
-          </div>
-          <div>
-            <button class='py-2 px-6 bg-black text-white rounded-3xl font-semibold'>Contact</button>
-          </div>
-        </div>
-        
+<nav class="bg-emerald-900 shadow-md text-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16">
+      <!-- Logo -->
+      <div class="flex-shrink-0 flex items-center">
+        <a href="./index.php" class="text-xl text-white font-bold text-gray-800">MadMark</a>
       </div>
-    </navbar>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex space-x-6 items-center">
+        <a href="./index.php" class="text-gray-600 hover:text-blue-600 font-medium">Home</a>
+        <a href="./games.php" class="text-gray-600 hover:text-blue-600 font-medium">GAMES</a>
+        <a href="./search_results.php" class="text-gray-600 hover:text-blue-600 font-medium">search</a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <div class="md:hidden flex items-center">
+        <button id="menu-btn" class="text-gray-600 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2">
+    <a href="#" class="block text-gray-600 hover:text-blue-600">Home</a>
+    <a href="#" class="block text-gray-600 hover:text-blue-600">Projects</a>
+    <a href="#" class="block text-gray-600 hover:text-blue-600">About</a>
+    <a href="#" class="block text-gray-600 hover:text-blue-600">Contact</a>
+  </div>
+</nav>
+
+<script>
+  const btn = document.getElementById('menu-btn');
+  const menu = document.getElementById('mobile-menu');
+
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
