@@ -1,6 +1,7 @@
 <?php
 include 'partials/header.php';
 include 'scripts/featured_games.php';
+include 'scripts/all_games.php';
 ?>
 <section 
   class="relative bg-cover  bg-no-repeat h-[70vh] flex items-center justify-center" 
@@ -71,7 +72,7 @@ include 'scripts/featured_games.php';
           <p class="text-gray-600 mb-4">
             Dive into a futuristic world filled with neon lights, fast action, and mystery.
           </p>
-          <button class="px-5 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition">
+          <button class="px-5 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition"  onclick="window.location.href='game_info.php?game_id=<?= $game['id'] ?>'">>
             More Info
           </button>
         </div>
